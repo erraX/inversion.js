@@ -1,6 +1,7 @@
 # inversion.js
 
 [![npm version](https://badge.fury.io/js/inversionjs.svg)](https://badge.fury.io/js/inversionjs)
+[![npm](https://img.shields.io/npm/dm/inversionjs.svg)](https://www.npmjs.com/package/inversionjs)
 [![Build Status](https://travis-ci.org/erraX/inversion.js.svg?branch=master)](https://travis-ci.org/erraX/inversion.js)
 [![dependencies](https://david-dm.org/erraX/inversion.js.svg)](https://travis-ci.org/erraX/inversion.js)
 [![Inline docs](http://inch-ci.org/github/erraX/inversion.js.svg?branch=master)](http://inch-ci.org/github/erraX/inversion.js)
