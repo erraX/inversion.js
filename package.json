@@ -8,6 +8,7 @@
     "lint:lib": "eslint lib",
     "test": "cross-env BABEL_ENV=commonjs jest",
     "test:watch": "npm run test -- --watch",
+    "build:umd": "npm run build:umd && npm run build:umd:min",
     "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack ./index.js dist/inversion.js",
     "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack ./index.js dist/inversion.min.js"
   },
