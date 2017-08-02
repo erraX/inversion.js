@@ -25,7 +25,47 @@ inversion.js can be used in a browser or in a nodejs app. It can be installed vi
 
 ## Simple example
 
-## Develop
+```javascript
+// Module A
+
+function Foo(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Foo.prototype.say = function () {
+    console.log('My name:' + this.name + ', age: ' + this.age);
+}
+
+```
+
+```javascript
+// Registry
+
+var registry = new Registry();
+
+// Register A via deps
+registry.register({
+    name: 'moduleDeps',
+    module: Foo,
+    deps: ['zemin', 'infinity']
+});
+
+// Register B via factory
+registry.register({
+    name: 'moduleFactory',
+    module: Foo,
+    deps: { name: 'zemin', age: 'infinity' }
+    factory: function (registry, Module, deps) {
+        return new Module(deps.name, deps.age);
+    }
+});
+
+registry.get('moduleDeps').say()
+registry.get('moduleFactory').say()
+
+//    ==> `My name: zemin, age: infinity`
+```
 
 ## Test
 
